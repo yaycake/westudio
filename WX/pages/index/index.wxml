@@ -24,13 +24,17 @@
       Contact Us
     </view>
   </view>
-  <view class = "work-panel">
-    <swipe>
-    
-    </swipe>
-  </view>
-
 
 </view>
 
-
+ <view class = "work-panel">
+    <swiper class = "work-swipe" indicator-dots="true" interval="5000" duration="1000" vertical="true">
+      <block wx:for="{{testObjectArray}}" wx:for-item="object" wx:for-index="index" wx:key = "{{object}}">
+        <swiper-item>
+          <view style="width: 100%; height: 100%; border: 1px solid blue">
+            {{object.text}}
+          </view>
+        </swiper-item>
+      </block>
+  </swiper>
+  </view>

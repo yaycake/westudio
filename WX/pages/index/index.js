@@ -8,11 +8,9 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    // workTabActive: true,
-    // peopleTabActive: false, 
-    // contactTabActive: false,
     currentActiveTab: 'work', 
-    currentActivePanel: 'work', 
+    currentActivePanel: 'work',
+    testObjectArray: [{text: 'swipe 1'}, {text: 'swipe 2'}],
   },
   //事件处理函数
   bindViewTap: function() {
@@ -72,8 +70,7 @@ Page({
 
     console.log("active tab : " + this.data.currentActiveTab)
 
-  }
-
+  }, 
 
 
 

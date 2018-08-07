@@ -48,3 +48,18 @@
 .inactive-tab {
   border-bottom: none;
 }
+
+.work-panel {
+  width: 90vw;
+  height: 90vh;
+  margin: 0 auto;
+  background: black;
+  border: 2px dashed red;
+}
+.work-swipe {
+  border-radius: 50rpx;
+  border: 1 px solid pink;
+  background: white;
+  width: 100%;
+  height: 100%;
+}

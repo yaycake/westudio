@@ -33,6 +33,7 @@
       <!-- if the object is a slide, render -->
       <block wx:for="{{testObjectArray}}" wx:for-item="object" wx:for-index="index" wx:key = "{{object}}">
         <block wx:if="{{object.swipetype == 'slide'}}">
+          <!-- - - - - - - slide swiper card -->
           <swiper-item class='swipe-item' id = "index">
             <view class = "swipe-item-image">
               {{object.image}}
@@ -45,6 +46,7 @@
         </block>
         <!-- if the object is last summary slide, render -->
         <block wx:if="{{object.swipetype == 'summary'}}">
+          <!-- - - - - summary swiper card -->
           <swiper-item class='swipe-item' id = "index">
             <view class="swipe-summary-wrapper">
               <view class="swipe-summary-container">
@@ -66,14 +68,15 @@
                 </view>
 
                 <view class="summary-body">
-                  <scroll-view scroll-y="true">
+                  <scroll-view scroll-y="true" >
                     Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum
                   </scroll-view>
                 </view>
 
                 <!-- - - - - - - start 'view more' links -->
                 <view class="view-more">
-                  <text>View More Projects</text>
+                  <text>View More</text>
+                  <text>All Projects</text>
                 </view>
 
               </view>

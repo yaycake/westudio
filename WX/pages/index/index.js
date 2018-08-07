@@ -10,7 +10,19 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     currentActiveTab: 'work', 
     currentActivePanel: 'work',
-    testObjectArray: [{text: 'swipe 1'}, {text: 'swipe 2'}],
+    testObjectArray: [
+      {
+        image: 'swipe 1 image', 
+        title: 'Swipe 1 Title',
+        subtitle: 'Swipe 1 Subtitle'
+      }, 
+      {
+        image: 'swipe 2', 
+        title: 'swipe 2 title',
+        subtitle: 'swipe 2 subtitle'
+      
+      }
+    ],
   },
   //事件处理函数
   bindViewTap: function() {

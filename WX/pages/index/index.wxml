@@ -1,17 +1,3 @@
-<!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
-
 <view class="wrapper">
   <view class = "tab-nav">
     <view bindtap='activeTab' class = "tab-item {{currentActiveTab === 'work' ? 'active-tab' : 'inactive-tab'}}" id="work">
@@ -27,64 +13,13 @@
 
 </view>
 
- <view class = "work-panel">
-    <!-- let's vertical swipe -->
-    <swiper class = "work-swipe" indicator-dots="true" interval="5000" duration="1000" vertical="true">
-      <!-- if the object is a slide, render -->
-      <block wx:for="{{testObjectArray}}" wx:for-item="object" wx:for-index="index" wx:key = "{{object}}">
-        <block wx:if="{{object.swipetype == 'slide'}}">
-          <!-- - - - - - - slide swiper card -->
-          <swiper-item class='swipe-item' id = "index">
-            <view class = "swipe-item-image">
-              {{object.image}}
-            </view>
-            <view class="swipe-item-label">
-              <text class="label-title">{{object.title}}</text>
-              <text class="label-subtitle">{{object.subtitle}}</text>
-            </view>
-          </swiper-item>
-        </block>
-        <!-- if the object is last summary slide, render -->
-        <block wx:if="{{object.swipetype == 'summary'}}">
-          <!-- - - - - summary swiper card -->
-          <swiper-item class='swipe-item' id = "index">
-            <view class="swipe-summary-wrapper">
-              <view class="swipe-summary-container">
-                <view class="summary-header">
-                  <text>{{object.title}}</text>
-                  <text>{{object.subtitle}}</text>
-                </view>
-                <!-- - - - - - nested talent-card component -->
+ <!-- - - - - - Work Panel View When currentActiveTab is work -->
+<view wx:if="{{currentActiveTab == 'work'}}">
+    <import src="../../templates/work/work.wxml"/>
+    <template is="workItem" data="{{currentActiveTab, currentActivePanel, testObjectArray}}"/>
+</view>
 
-                <view class="talent-card-container">
-              
-                  <view class="talent-avatar" style="background:blue; border-radius: 50%; width: 100rpx; height: 100rpx;">
-                    {{object.avatarUrl}}
-                  </view>
-                  <view class="talent-preview">
-                    <text>{{object.talent.firstName + ', ' + object.talent.lastName}}</text>
-                    <text>{{object.talent.skills + ', ' + object.talentRole}}</text>
-                  </view>
-                </view>
-
-                <view class="summary-body">
-                  <scroll-view scroll-y="true" >
-                    Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum
-                  </scroll-view>
-                </view>
-
-                <!-- - - - - - - start 'view more' links -->
-                <view class="view-more">
-                  <text>View More</text>
-                  <text>All Projects</text>
-                </view>
-
-              </view>
-            </view>
-          </swiper-item>
-        </block>
-      </block>
-  </swiper>
-  <!-- - - - - end vertical swipe -->
-
-  </view>
+<!-- 
+currentActiveTab: 'work', 
+    currentActivePanel: 'work',
+    testObjectArray: -->

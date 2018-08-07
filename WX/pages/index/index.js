@@ -12,16 +12,36 @@ Page({
     currentActivePanel: 'work',
     testObjectArray: [
       {
+        swipetype: 'slide',
         image: 'swipe 1 image', 
         title: 'Swipe 1 Title',
         subtitle: 'Swipe 1 Subtitle'
       }, 
       {
+        swipetype: 'slide',
         image: 'swipe 2', 
         title: 'swipe 2 title',
         subtitle: 'swipe 2 subtitle'
-      
+      }, 
+      {
+        swipetype: 'slide',
+        image: 'swipe 3',
+        title: 'swipe 3 title',
+        subtitle: 'swipe 3 subtitle'
+      }, 
+      {
+        swipetype: 'summary',
+        image: 'swipe last',
+        title: 'Title of Project',
+        subtitle: 'subtitle of project', 
+        designer: 'title of designer', 
+        headertext: 'this is header text',
+        textcontent: 'text content',
+        link1: 'link 1',
+        link2: 'link 2'
       }
+
+
     ],
   },
   //事件处理函数

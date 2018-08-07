@@ -34,14 +34,19 @@ Page({
         image: 'swipe last',
         title: 'Title of Project',
         subtitle: 'subtitle of project', 
-        designer: 'title of designer', 
+        talent: {
+            avatarUrl: 'avatar.png',
+            firstName: 'First name',
+            lastName: 'Last Name',
+            skills: 'My Skills',
+          }, 
+          // - - - - talents have diff roles on diff projects
+        talentRole: 'Talent Role',
         headertext: 'this is header text',
         textcontent: 'text content',
         link1: 'link 1',
         link2: 'link 2'
       }
-
-
     ],
   },
   //事件处理函数

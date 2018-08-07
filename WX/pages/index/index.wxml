@@ -46,9 +46,37 @@
         <!-- if the object is last summary slide, render -->
         <block wx:if="{{object.swipetype == 'summary'}}">
           <swiper-item class='swipe-item' id = "index">
-            <view class="swipe-summary">
-              <text>{{object.title}}</text>
-              <text>{{object.subtitle}}</text>
+            <view class="swipe-summary-wrapper">
+              <view class="swipe-summary-container">
+                <view class="summary-header">
+                  <text>{{object.title}}</text>
+                  <text>{{object.subtitle}}</text>
+                </view>
+                <!-- - - - - - nested talent-card component -->
+
+                <view class="talent-card-container">
+              
+                  <view class="talent-avatar" style="background:blue; border-radius: 50%; width: 100rpx; height: 100rpx;">
+                    {{object.avatarUrl}}
+                  </view>
+                  <view class="talent-preview">
+                    <text>{{object.talent.firstName + ', ' + object.talent.lastName}}</text>
+                    <text>{{object.talent.skills + ', ' + object.talentRole}}</text>
+                  </view>
+                </view>
+
+                <view class="summary-body">
+                  <scroll-view scroll-y="true">
+                    Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum
+                  </scroll-view>
+                </view>
+
+                <!-- - - - - - - start 'view more' links -->
+                <view class="view-more">
+                  <text>View More Projects</text>
+                </view>
+
+              </view>
             </view>
           </swiper-item>
         </block>

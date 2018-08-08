@@ -39,7 +39,7 @@
 
 <view wx:if="{{currentActiveTab == 'people'}}">
   <import src="../../templates/profiles/profile.wxml"/>
-  <template is="profile" data="{{currentActiveTab, currentActivePanel, profileArray}}"/>
+  <template is="profile" data="{{currentActiveTab, currentActivePanel, workArray,  profileArray}}"/>
 </view>
 
 <!-- - - - - - Contact Panel View when currentActivetab is contact -->

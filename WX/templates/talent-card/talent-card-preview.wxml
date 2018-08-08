@@ -1,0 +1,12 @@
+
+<template name="talent-card-preview" >
+ <view class="talent-card-container">    
+    <view class="talent-avatar">
+      {{work.talent.avatarUrl}}
+    </view>
+    <view class="talent-preview">
+      <text class="talent-name">{{work.talent.firstName + ', ' + work.talent.lastName}}</text>
+      <text class="skills-role">{{work.talent.skills + ', ' + work.talentRole}}</text>
+    </view>
+  </view>
+</template>

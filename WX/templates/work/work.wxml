@@ -32,16 +32,8 @@
                 </view>
                 <!-- - - - - - nested talent-card component -->
 
-                <view class="talent-card-container">
-              
-                  <view class="talent-avatar">
-                    {{work.talent.avatarUrl}}
-                  </view>
-                  <view class="talent-preview">
-                    <text class="talent-name">{{work.talent.firstName + ', ' + work.talent.lastName}}</text>
-                    <text class="skills-role">{{work.talent.skills + ', ' + work.talentRole}}</text>
-                  </view>
-                </view>
+                <import src="../talent-card/talent-card-preview.wxml"/>
+                <template is="talent-card-preview" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
 
                 <view class="summary-body">
                   <scroll-view scroll-y="true" >

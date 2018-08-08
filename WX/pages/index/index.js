@@ -8,11 +8,46 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    // workTabActive: true,
-    // peopleTabActive: false, 
-    // contactTabActive: false,
     currentActiveTab: 'work', 
-    currentActivePanel: 'work', 
+    currentActivePanel: 'work',
+    workArray: [
+      {
+        swipetype: 'slide',
+        image: 'swipe 1 image', 
+        title: 'Swipe 1 Title',
+        subtitle: 'Swipe 1 Subtitle'
+      }, 
+      {
+        swipetype: 'slide',
+        image: 'swipe 2', 
+        title: 'swipe 2 title',
+        subtitle: 'swipe 2 subtitle'
+      }, 
+      {
+        swipetype: 'slide',
+        image: 'swipe 3',
+        title: 'swipe 3 title',
+        subtitle: 'swipe 3 subtitle'
+      }, 
+      {
+        swipetype: 'summary',
+        image: 'swipe last',
+        title: 'Title of Project',
+        subtitle: 'subtitle of project', 
+        talent: {
+            avatarUrl: 'avatar.png',
+            firstName: 'First name',
+            lastName: 'Last Name',
+            skills: 'My Skills',
+          }, 
+          // - - - - talents have diff roles on diff projects
+        talentRole: 'Talent Role',
+        headertext: 'this is header text',
+        textcontent: 'text content',
+        link1: 'link 1',
+        link2: 'link 2'
+      }
+    ],
   },
   //事件处理函数
   bindViewTap: function() {
@@ -61,19 +96,14 @@ Page({
   activeTab: function (e) {
     console.log(e)
     console.log(e.currentTarget.id+'TabActive')
-    var tabActive = e.currentTarget.id+"TabActive"
+    let tabActive = e.currentTarget.id+"TabActive"
 
     this.setData({
       currentActiveTab: e.currentTarget.id,
       tabActive: true
     });
-
-    // console.log(this.currentActiveTab)
-
     console.log("active tab : " + this.data.currentActiveTab)
-
-  }
-
+  }, 
 
 
 

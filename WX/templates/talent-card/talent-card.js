@@ -1,4 +1,4 @@
-// work.js
+// talent-card.js
 Component({
   /**
    * 组件的属性列表

@@ -1,44 +1,45 @@
 <!--work.wxml-->
 
+
 <text>work.wxml</text>
 <template name="workItem">
    <view class = "work-panel">
     <!-- let's vertical swipe -->
     <swiper class = "work-swipe" indicator-dots="true" interval="5000" duration="1000" vertical="true">
       <!-- if the object is a slide, render -->
-      <block wx:for="{{testObjectArray}}" wx:for-item="object" wx:for-index="index" wx:key = "{{object}}">
-        <block wx:if="{{object.swipetype == 'slide'}}">
+      <block wx:for="{{workArray}}" wx:for-item="work" wx:for-index="index" wx:key = "{{work}}">
+        <block wx:if="{{work.swipetype == 'slide'}}">
           <!-- - - - - - - slide swiper card -->
           <swiper-item class='swipe-item' id = "index">
             <view class = "swipe-item-image">
-              {{object.image}}
+              {{work.image}}
             </view>
             <view class="swipe-item-label">
-              <text class="label-title">{{object.title}}</text>
-              <text class="label-subtitle">{{object.subtitle}}</text>
+              <text class="label-title">{{work.title}}</text>
+              <text class="label-subtitle">{{work.subtitle}}</text>
             </view>
           </swiper-item>
         </block>
         <!-- if the object is last summary slide, render -->
-      <block wx:if="{{object.swipetype == 'summary'}}">
+      <block wx:if="{{work.swipetype == 'summary'}}">
           <!-- - - - - summary swiper card -->
           <swiper-item class='swipe-item' id = "index">
             <view class="swipe-summary-wrapper">
               <view class="swipe-summary-container">
                 <view class="summary-header">
-                  <text>{{object.title}}</text>
-                  <text>{{object.subtitle}}</text>
+                  <text>{{work.title}}</text>
+                  <text>{{work.subtitle}}</text>
                 </view>
                 <!-- - - - - - nested talent-card component -->
 
                 <view class="talent-card-container">
               
-                  <view class="talent-avatar" style="background:blue; border-radius: 50%; width: 100rpx; height: 100rpx;">
-                    {{object.avatarUrl}}
+                  <view class="talent-avatar">
+                    {{work.talent.avatarUrl}}
                   </view>
                   <view class="talent-preview">
-                    <text>{{object.talent.firstName + ', ' + object.talent.lastName}}</text>
-                    <text>{{object.talent.skills + ', ' + object.talentRole}}</text>
+                    <text class="talent-name">{{work.talent.firstName + ', ' + work.talent.lastName}}</text>
+                    <text class="skills-role">{{work.talent.skills + ', ' + work.talentRole}}</text>
                   </view>
                 </view>
 
@@ -50,8 +51,8 @@
 
                 <!-- - - - - - - start 'view more' links -->
                 <view class="view-more">
-                  <text>View More</text>
-                  <text>All Projects</text>
+                  <text>View All Projects</text>
+                  <text>Show Me More</text>
                 </view>
 
               </view>

@@ -43,12 +43,15 @@
 }
 
 .active-tab {
-  border-bottom: 2px solid blue;
-  color: red;
+  /* border-bottom: 2px solid blue; */
+  color: black;
+  font-weight: bold;
 }
 
 .inactive-tab {
   border-bottom: none;
+  font-weight: light;
+  color:#4D4D4D;
 }
 
 /* - - - - work panel */
@@ -150,7 +153,7 @@
 
 .talent-card-container {
   position: absolute;
-  top: 200rpx;
+  top: 180rpx;
   width: 100%;
   height: 10vh;
   /* border: 1px solid hotpink; */
@@ -162,41 +165,60 @@
 .talent-preview {
   display: flex;
   flex-direction: column;
-  margin-left: 30rpx;
-  font-size: 30rpx;
+  /* margin-left: 30rpx; */
+  font-size: 24rpx;
 }
 
 .talent-avatar {
-  margin: 0rpx 50rpx;
+  margin-left: 50rpx;
+  margin-right: 30rpx;
+  font-size: 15rpx;
+  background-color: blue;
+  border-radius: 50%;
+  width: 72rpx;
+  height: 72rpx;
 }
+
+.talent-name{
+  font-weight: bolder;
+}
+
+.skills-role{
+  /* font-style: italic; */
+}
+
+
+/* - - - - summary text */
 
 .summary-body {
   position: absolute;
-  top: 35%;
-  width: 85%;
-  height: 50%;
+  top: 31%;
+  width: 80%;
+  height: 60%;
   text-align: left;
-  font-size: 30rpx;
-  line-height: 1.5;
+  line-height: 1.40;
   border-radius: 10rpx;
-  /* border: 2px solid orange; */
-  
+  font-size: 25rpx;
+  letter-spacing: .1;
+  left: 8%;
 }
 
 .summary-body>scroll-view {
   height: 100%;
   scroll-behavior: smooth;
+  font-weight: light;
 }
 
 
 .view-more {
   position: absolute; 
   bottom: 30rpx;
-  font-size: 30rpx;
+  font-size: 24rpx;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  font-weight: bolder;
 }
 
 .view-more>text {

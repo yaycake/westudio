@@ -13,13 +13,8 @@
 
 </view>
 
- <!-- - - - - - Work Panel View When currentActiveTab is work -->
+ <!-- - - - - - Work Panel View then currentActiveTab is work -->
 <view wx:if="{{currentActiveTab == 'work'}}">
     <import src="../../templates/work/work.wxml"/>
-    <template is="workItem" data="{{currentActiveTab, currentActivePanel, testObjectArray}}"/>
+    <template is="workItem" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
 </view>
-
-<!-- 
-currentActiveTab: 'work', 
-    currentActivePanel: 'work',
-    testObjectArray: -->

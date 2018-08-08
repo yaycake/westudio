@@ -14,7 +14,36 @@
 </view>
 
  <!-- - - - - - Work Panel View then currentActiveTab is work -->
-<view wx:if="{{currentActiveTab == 'work'}}">
-    <import src="../../templates/work/work.wxml"/>
-    <template is="workItem" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
+ <swiper id="work-swiper" indicator-dots="true" interval="5000" duration="1000" wx:if="{{currentActiveTab == 'work'}}">
+  <swiper-item>
+    <view wx:if="{{currentActiveTab == 'work'}}">
+        <import src="../../templates/work/work.wxml"/>
+        <template is="workItem" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
+    </view>
+  </swiper-item>
+  <swiper-item>
+   <view>
+      <import src="../../templates/work/work.wxml"/>
+      <template is="workItem" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
+    </view>
+  </swiper-item>
+  <swiper-item>
+   <view>
+      <import src="../../templates/work/work.wxml"/>
+      <template is="workItem" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
+    </view>
+  </swiper-item>
+</swiper>
+<!-- - - - - - - People Panel View then currentActiveTab is people -->
+
+
+<view wx:if="{{currentActiveTab == 'people'}}">
+  <import src="../../templates/profiles/profile.wxml"/>
+  <template is="profile" data="{{currentActiveTab, currentActivePanel, profileArray}}"/>
+</view>
+
+<!-- - - - - - Contact Panel View when currentActivetab is contact -->
+
+<view wx:if="{{currentActiveTab == 'contact'}}">
+  CONTACT US
 </view>

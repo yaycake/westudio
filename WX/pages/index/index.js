@@ -96,17 +96,13 @@ Page({
   activeTab: function (e) {
     console.log(e)
     console.log(e.currentTarget.id+'TabActive')
-    var tabActive = e.currentTarget.id+"TabActive"
+    let tabActive = e.currentTarget.id+"TabActive"
 
     this.setData({
       currentActiveTab: e.currentTarget.id,
       tabActive: true
     });
-
-    // console.log(this.currentActiveTab)
-
     console.log("active tab : " + this.data.currentActiveTab)
-
   }, 
 
 

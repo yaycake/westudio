@@ -27,7 +27,7 @@
   flex-direction: horizontal;
   justify-content: space-between; 
   font-size: 30rpx;
-  margin: 20rpx;
+  margin: 10rpx;
 }
 
 .tab-item {
@@ -55,7 +55,9 @@
 }
 
 /* - - - - work panel */
-
+#work-swiper{
+  height: 91vh!important;
+}
 .work-panel {
   width: 90vw;
   height: 90vh;
@@ -140,7 +142,7 @@
 .summary-header{
   position: absolute;
   top: 50rpx; 
-  left: 30rpx;
+  left: 50rpx;
   display: flex;
   flex-direction: column;
   margin-bottom: 30rpx;
@@ -192,9 +194,9 @@
 
 .summary-body {
   position: absolute;
-  top: 31%;
+  top: 33%;
   width: 80%;
-  height: 60%;
+  height: 40%;
   text-align: left;
   line-height: 1.40;
   border-radius: 10rpx;
@@ -212,17 +214,30 @@
 
 .view-more {
   position: absolute; 
-  bottom: 30rpx;
-  font-size: 24rpx;
+  bottom: 40rpx;
+  font-size: 18rpx;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  font-weight: bolder;
 }
 
 .view-more>text {
   text-align: center;
-  margin: 0rpx 50rpx;
+  /* margin: 0rpx 50rpx; */
 }
 
+.view-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85rpx;
+  text-align: center;
+}
+
+.view-icon{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: hotpink;
+  margin-bottom: 15rpx;
+}

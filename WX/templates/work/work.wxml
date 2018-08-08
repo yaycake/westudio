@@ -1,7 +1,5 @@
 <!--work.wxml-->
 
-
-<text>work.wxml</text>
 <template name="workItem">
    <view class = "work-panel">
     <!-- let's vertical swipe -->
@@ -26,27 +24,35 @@
           <swiper-item class='swipe-item' id = "index">
             <view class="swipe-summary-wrapper">
               <view class="swipe-summary-container">
+                <!-- - - - - - title of project -->
                 <view class="summary-header">
                   <text>{{work.title}}</text>
                   <text>{{work.subtitle}}</text>
                 </view>
-                <!-- - - - - - nested talent-card component -->
-
+                <!-- - - - - - nested talent-card-preview template -->
                 <import src="../talent-card/talent-card-preview.wxml"/>
                 <template is="talent-card-preview" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
-
+                <!-- - - - talent card preview end -->
                 <view class="summary-body">
                   <scroll-view scroll-y="true" >
                     Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum
                   </scroll-view>
                 </view>
-
                 <!-- - - - - - - start 'view more' links -->
                 <view class="view-more">
-                  <text>View All Projects</text>
-                  <text>Show Me More</text>
+                  <view class="view-link">
+                    <view class="view-icon"></view>
+                    View All Projects
+                  </view>
+                  <view class="view-link">
+                    <view class="view-icon"></view>
+                    Share
+                  </view>
+                  <view class="view-link">
+                    <view class="view-icon"></view>
+                    Show me More
+                  </view>
                 </view>
-
               </view>
             </view>
           </swiper-item>

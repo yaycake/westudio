@@ -1,0 +1,16 @@
+<!--portfolio.wxml-->
+<text>portfolio.wxml</text>
+  <template name="profile">
+    <view>PORTFOLIOOOOoooOOOooOOooOo</view>
+
+  <view class="profile-panel">
+    <swiper>
+      <block wx:for="{{profilesArray}}" wx:for-item="profile" wx:for-index="index" wx:key = "{{profile}}">
+        <swiper-item class="profileItem">
+          cuhcuh
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  </template>

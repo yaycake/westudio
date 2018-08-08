@@ -10,6 +10,9 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     currentActiveTab: 'work', 
     currentActivePanel: 'work',
+    profileArray: [
+      
+    ],
     workArray: [
       {
         swipetype: 'slide',

@@ -1,64 +1,31 @@
 <!--portfolio.wxml-->
 <text>portfolio.wxml</text>
   <template name="profile">
-    <view>PORTFOLIOOOOoooOOOooOOooOo</view>
    <view class = "work-panel">
     <!-- let's vertical swipe -->
     <swiper class = "work-swipe" indicator-dots="true" interval="5000" duration="1000" vertical="true">
       <!-- if the object is a slide, render -->
-      <block wx:for="{{workArray}}" wx:for-item="work" wx:for-index="index" wx:key = "{{work}}">
-        <block wx:if="{{work.swipetype == 'slide'}}">
+     
           <!-- - - - - - - slide swiper card -->
           <swiper-item class='swipe-item' id = "index">
-            <view class = "swipe-item-image">
-              {{work.image}}
-            </view>
-            <view class="swipe-item-label">
-              <text class="label-title">{{work.title}}</text>
-              <text class="label-subtitle">{{work.subtitle}}</text>
-            </view>
-          </swiper-item>
-        </block>
-        <!-- if the object is last summary slide, render -->
-      <block wx:if="{{work.swipetype == 'summary'}}">
-          <!-- - - - - summary swiper card -->
-          <swiper-item class='swipe-item' id = "index">
-            <view class="swipe-summary-wrapper">
-              <view class="swipe-summary-container">
-                <!-- - - - - - title of project -->
-                <view class="summary-header">
-                  <text>{{work.title}}</text>
-                  <text>{{work.subtitle}}</text>
-                </view>
-                <!-- - - - - - nested talent-card-preview template -->
-                <import src="../talent-card/talent-card-preview.wxml"/>
-                <template is="talent-card-preview" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
-                <!-- - - - talent card preview end -->
-                <view class="summary-body">
-                  <scroll-view scroll-y="true" >
-                    Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsumorem ipsum lorem ipsum lorem ipsum lorem ipsum orem ipsum lorem ipsum lorem ipsum lorem ipsum
-                  </scroll-view>
-                </view>
-                <!-- - - - - - - start 'view more' links -->
-                <view class="view-more">
-                  <view class="view-link">
-                    <view class="view-icon"></view>
-                    View All Projects
-                  </view>
-                  <view class="view-link">
-                    <view class="view-icon"></view>
-                    Share
-                  </view>
-                  <view class="view-link">
-                    <view class="view-icon"></view>
-                    Show me More
-                  </view>
-                </view>
+            <view class="portfolio_swipe_card">
+              <view class = "portfolio_avatar"></view>
+              <view class="profile_intro_header">
+                <text class="profile_intro_name">First Name Last Name</text>
+                <text class="profile_job_title">Job Title</text>
+                <text class="profile_skills">Job Skills</text>
+              </view>
+              <view class="profile_intro_contacts">
+                <text class="profile_website">thegraceyang.com</text>
+                <text class="profile_wechat">yay_cake</text>
+                <text class="profile_wechat_qrcode">[ ]</text>
               </view>
             </view>
           </swiper-item>
-        </block>
-      </block>
+          <swiper-item>
+            <view class="portfolio_swipe_card">
+            </view>
+          </swiper-item>
   </swiper>
   <!-- - - - - end vertical swipe -->
   </view>
@@ -68,7 +35,7 @@
 
 
 
-
+<!-- 
   <view class="profile-panel">
     <swiper>
       <block wx:for="{{profilesArray}}" wx:for-item="profile" wx:for-index="index" wx:key = "{{profile}}">
@@ -77,4 +44,4 @@
         </swiper-item>
       </block>
     </swiper>
-  </view>
+  </view> -->

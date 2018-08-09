@@ -3,7 +3,7 @@
 <template name="workItem">
    <view class = "work-panel">
     <!-- let's vertical swipe -->
-    <swiper class = "work-swipe" indicator-dots="true" interval="5000" duration="1000" vertical="true">
+    <swiper class = "content-swiper" indicator-dots="true" interval="5000" duration="1000" vertical="true">
       <!-- if the object is a slide, render -->
       <block wx:for="{{workArray}}" wx:for-item="work" wx:for-index="index" wx:key = "{{work}}">
         <block wx:if="{{work.swipetype == 'slide'}}">
@@ -30,8 +30,10 @@
                   <text>{{work.subtitle}}</text>
                 </view>
                 <!-- - - - - - nested talent-card-preview template -->
-                <import src="../talent-card/talent-card-preview.wxml"/>
-                <template is="talent-card-preview" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
+                <view class="talent_container">
+                  <import src="../talent-card/talent-card-preview.wxml"/>
+                  <template is="talent-card-preview" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
+                </view>
                 <!-- - - - talent card preview end -->
                 <view class="summary-body">
                   <scroll-view scroll-y="true" >

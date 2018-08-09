@@ -14,7 +14,7 @@
 </view>
 
  <!-- - - - - - Work Panel View then currentActiveTab is work -->
- <swiper id="work-swiper" indicator-dots="true" interval="5000" duration="1000" wx:if="{{currentActiveTab == 'work'}}">
+ <swiper class="content-swiper" indicator-dots="true" interval="5000" duration="1000" wx:if="{{currentActiveTab == 'work'}}">
   <swiper-item>
     <view wx:if="{{currentActiveTab == 'work'}}">
         <import src="../../templates/work/work.wxml"/>

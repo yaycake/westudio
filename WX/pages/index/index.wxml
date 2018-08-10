@@ -36,12 +36,16 @@
 </swiper>
 <!-- - - - - - - People Panel View then currentActiveTab is people -->
 
+<swiper class="content-swiper" indicator-dots="true" interval="5000" duration="1000" wx:if="{{currentActiveTab == 'people'}}">
+  <swiper-item>
 
-<view wx:if="{{currentActiveTab == 'people'}}">
-  <import src="../../templates/profiles/profile.wxml"/>
-  <template is="profile" data="{{currentActiveTab, currentActivePanel, workArray,  profileArray}}"/>
-</view>
+  <view wx:if="{{currentActiveTab == 'people'}}">
+    <import src="../../templates/profiles/profile.wxml"/>
+    <template is="profile" data="{{currentActiveTab, currentActivePanel, workArray,  profileArray}}"/>
+  </view>
 
+</swiper-item>
+</swiper>
 <!-- - - - - - Contact Panel View when currentActivetab is contact -->
 
 <view wx:if="{{currentActiveTab == 'contact'}}">

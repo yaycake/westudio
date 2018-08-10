@@ -1,52 +1,55 @@
 <!--portfolio.wxml-->
 <text>portfolio.wxml</text>
   <template name="profile">
-   <view class = "work-panel">
-    <!-- let's vertical swipe -->
-    <swiper class = "content-swiper" indicator-dots="true" interval="5000" duration="1000" vertical="true">
-      <!-- if the object is a slide, render -->
-     
-          <!-- - - - - - - slide swiper card -->
-          <swiper-item class='swipe-item' id = "index">
-            <view class="portfolio_swipe_card">
-              <view class = "portfolio_avatar"></view>
-              <view class="profile_intro_header">
-                <text class="profile_intro_name">First Name Last Name</text>
-                <text class="profile_job_title">Job Title</text>
-                <text class="profile_skills">Job Skills</text>
-              </view>
-              <view class="profile_intro_contacts">
-                <text class="profile_website">thegraceyang.com</text>
-                <text class="profile_wechat">yay_cake</text>
-                <text class="profile_wechat_qrcode">[ ]</text>
-              </view>
-            </view>
-          </swiper-item>
-          <swiper-item class="swipe-item">
-            <view class="portfolio_swipe_card">
-              <view class="portfolio-header-small">
-                <!-- - - - - talent card container -->
-               <import src="../talent-card/talent-card-preview.wxml"/>
-                <template is="talent-card-preview" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
-             
-              </view>
-             <view class="profile_recent_container">
-              <view>My Recent Projects</view>
-              <view>
-                <swiper scroll-x="true">
-                  <swiper-item>
-                    This is a swiper item
-                  </swiper-item>
-                </swiper>
-              </view>
-             
-             </view>
-            </view>
-          </swiper-item>
-  </swiper>
-  <!-- - - - - end vertical swipe -->
-  </view>
+   <!-- <swiper class="content-swiper" indicator-dots="true" interval="5000" duration="1000" wx:if="{{currentActiveTab == 'work'}}">
+    <swiper-item> -->
+      <view class = "work-panel">
+        <!-- let's vertical swipe -->
+        <swiper class = "content-swiper" indicator-dots="true" interval="5000" duration="1000" vertical="true">
+          <!-- if the object is a slide, render -->
+        
+              <!-- - - - - - - slide swiper card -->
+              <swiper-item class='swipe-item' id = "index">
+                <view class="portfolio_swipe_card">
+                  <view class = "portfolio_avatar"></view>
+                  <view class="profile_intro_header">
+                    <text class="profile_intro_name">First Name Last Name</text>
+                    <text class="profile_job_title">Job Title</text>
+                    <text class="profile_skills">Job Skills</text>
+                  </view>
+                  <view class="profile_intro_contacts">
+                    <text class="profile_website">thegraceyang.com</text>
+                    <text class="profile_wechat">yay_cake</text>
+                    <text class="profile_wechat_qrcode">[ ]</text>
+                  </view>
+                </view>
+              </swiper-item>
+              <swiper-item class="swipe-item">
+                <view class="portfolio_swipe_card">
+                  <view class="portfolio-header-small">
+                    <!-- - - - - talent card container -->
+                    <import src="../talent-card/talent-card-preview.wxml"/>
+                    <template is="talent-card-preview" data="{{currentActiveTab, currentActivePanel, workArray}}"/>
+                  </view>
 
+                <view class="profile_recent_container">
+                  <view>My Recent Projects</view>
+                  <view>
+                    <scroll-view class="profile_projects_scroll">
+                      
+                    </scroll-view>
+                  </view>
+                
+                </view>
+                </view>
+              </swiper-item>
+      </swiper>
+      <!-- - - - - end vertical swipe -->
+      </view>
+    <!-- </swiper-item> -->
+    <!-- <swiper-item> -->
+    <!-- </swiper-item>
+  </swiper> -->
   </template>
 
 
